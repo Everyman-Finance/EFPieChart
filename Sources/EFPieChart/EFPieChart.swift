@@ -1,6 +1,10 @@
-public struct EFPieChart {
-    public private(set) var text = "Hello, World!"
+//
+//  EFPieChart.swift
+//  
+//
+//  Created by Justin Trautman on 11/5/21.
+//
 
-    public init() {
-    }
-}
+import Foundation
+
+public class EFPieChart { }
