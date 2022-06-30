@@ -1,3 +1,3 @@
 # EFPieChart
 
-A description of this package.
+Documentation will appear here very soon.
