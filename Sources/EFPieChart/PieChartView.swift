@@ -63,7 +63,7 @@ public struct PieChartView: View {
                 ZStack {
                     ForEach(0..<values.count, id: \.self) { i in
                         PieSliceView(data: slices[i])
-                            .scaleEffect(activeIndex == i ? 1.3 : 1)
+                            .scaleEffect(activeIndex == i ? 1.1 : 1)
                             .animation(.spring())
                      }
                     .frame(width: size.rawValue * geometry.size.width,
@@ -116,9 +116,9 @@ public struct PieChartView: View {
                 
             }
             .padding()
-            .background(backgroundColor)
             .foregroundColor(.gray)
         }
+        .frame(height: 180)
     }
 }
 
@@ -126,7 +126,7 @@ struct PieChartView_Previews: PreviewProvider {
     static var previews: some View {
         PieChartView(values: [1600, 300, 350],
                      names: ["Rent", "Gas", "Utilities"],
-                     formatter: {value in String(format: "$%.2f", value)})
+                     formatter: { value in String(format: "$%.2f", value) })
     }
 }
 
@@ -144,6 +144,7 @@ public struct PieChartRows: View {
                         .fill(colors[i])
                         .frame(width: 20, height: 20)
                     Text(names[i])
+                        .lineLimit(2)
                     Spacer()
                     
                     /**
